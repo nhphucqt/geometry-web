@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geometry</title>
+        <link rel="icon" href="icons/favicon.ico">
+        <link href="http://fonts.cdnfonts.com/css/pencil-2" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link id="theme" rel="stylesheet">
+    </head>
+    <body>
+        <div class="topNav">
+            <button title="F9" onclick="display(getInput())">Draw</button>
+            <div class="dropdown">
+                <button class="dropbtn">Themes</button>
+                <div class="dropdown-content">
+                    <button onclick="changeTheme('white')">White</button>
+                    <button onclick="changeTheme('eyewhite')">Eyewhite</button>
+                    <button onclick="changeTheme('water')">Water</button>
+                    <button onclick="changeTheme('antiquewhite')">Antiquewhite</button>
+                    <button onclick="changeTheme('darksky')">Dark sky</button>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Help</button>
+                <div class="dropdown-content">
+                    <a href="https://github.com/nhphucqt">My Github profile</a>
+                    <a>See project on Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="toggleDiv">
+                <button id="toggleButton" class="checkbox" onclick="toggleInputArea()">
+                    <ion-icon src="icons/caret-back-outline.svg"></ion-icon>
+                </button>
+            </div>
+            <div class="subMain">
+                <div id="inputColumn" class="column" style="width:15%">
+                    <textarea id="inputData" class="inputArea mousetrap" wrap="off" spellcheck="false" autofocus></textarea>
+                </div>
+                <div id="displayColumn" class="column" style="width:85%;">
+                    <div id="svgDiv" style="width:100%;"></div>
+                    <div id="buttonArea" style="height:20px;padding-left:50px">
+                        <button class="floatButton" onclick="display(data)">
+                            <ion-icon size="small" src="icons/home-outline.svg"></ion-icon>
+                        </button>
+                        <button class="floatButton" onclick="changeGridView()">
+                            <ion-icon size="small" src="icons/grid-outline.svg"></ion-icon>
+                        </button>
+                        <button class="floatButton" onclick="downloadSVG()">
+                            <ion-icon size="small" src="icons/download-outline.svg"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="css-element-queries-1.2.1/src/ResizeSensor.js"></script>
+        <script src="https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.min.js?a4098"></script>
+
+        <script src="geometry.js"></script>
+        <script src="svg-themes.js"></script>
+        <script src="localStorage.js"></script>
+        <script src="display.js"></script>
+        <script src="function.js"></script>
+    </body>
+</html>

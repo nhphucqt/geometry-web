@@ -1,0 +1,56 @@
+body {
+    background-color: antiquewhite;
+}
+.topNav {
+    background-color: #38393b;
+}
+.topNav button, a {
+    background-color: #38393b;
+    color: grey;
+}
+.topNav button:hover, a:hover {
+    background-color: #454647;
+    color: white;
+}
+.dropdown .dropbtn {
+    color: grey;
+}
+.dropdown-content {
+    background-color: #38393b;
+}
+.dropdown-content button, a {
+    color: grey;
+}
+.dropdown-content button:hover, a:hover {
+    background-color: #454647;
+    color: white;
+}
+.dropdown:hover .dropbtn {
+    background-color: #454647;
+    color: white;
+}
+.floatButton {
+    background-color: antiquewhite;
+}
+.floatButton:hover {
+    background-color: rgb(253, 221, 180);
+}
+.inputArea {
+    background-color: antiquewhite;
+}
+.inputArea::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.inputArea::-webkit-scrollbar-thumb {
+    background-color: rgb(212, 187, 154);
+}
+.inputArea::-webkit-scrollbar-corner {
+    background-color: antiquewhite;
+}
+.checkbox {
+    background-color: antiquewhite;
+}
+.checkbox:hover {
+    background-color: rgb(253, 221, 180);
+}
