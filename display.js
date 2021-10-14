@@ -175,7 +175,6 @@ function getInput() {
     rawData = document.getElementById("inputData").value.split('\n');
     rawData = rawData.map(x => x.split(' ').filter(x => x != '')).filter(x => x.length > 0);
     // console.log(rawData);
-    console.log(INIT_DATA);
     data = JSON.parse(JSON.stringify(INIT_DATA));
     let cur = "", mode = -1;
     rawData.forEach(element => {
@@ -276,7 +275,7 @@ function rescaleAxis(newX, xTickValues, newY, yTickValues) {
         .style("fill", svgTheme[curTheme].axis);
 }
 
-function reScatter(newX, newY) {
+function rescatter(newX, newY) {
     scatter
         .selectAll("polygon")
             .attr('points', d => d.points.map(e => newX(e.x) + ',' + newY(e.y)).join(' '));
@@ -406,7 +405,7 @@ function updateChart() {
     var newXTicks, newYTicks;
     [newXTicks, newYTicks] = getNewTickValues(newX, newY);
     rescaleAxis(newX, newXTicks, newY, newYTicks);
-    reScatter(newX, newY);
+    rescatter(newX, newY);
 }
 
 new ResizeSensor(jQuery("#displayColumn"), function() {
@@ -449,7 +448,7 @@ new ResizeSensor(jQuery("#displayColumn"), function() {
     var newXTicks, newYTicks;
     [newXTicks, newYTicks] = getNewTickValues(x, y);
     rescaleAxis(x, newXTicks, y, newYTicks);
-    reScatter(x, y);
+    rescatter(x, y);
     resetZoom();
 });
 
