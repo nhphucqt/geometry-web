@@ -473,9 +473,11 @@ var themeSelect = d3.select("#theme");
 function changeTheme(theme) {
     if (typeof(Storage) !== "undefined")
         localStorage.setItem("theme", theme);
+    // themeSelect
+    //     .attr("href", "color-themes/theme-"+theme+".css");
+    document.getElementById(curTheme).disabled = true;
+    document.getElementById(theme).disabled = false;
     curTheme = theme;
-    themeSelect
-        .attr("href", "color-themes/theme-"+theme+".css");
     realSVG
         .style("background-color", svgTheme[theme].svg);
     xAxis.selectAll("path,line")
