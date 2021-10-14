@@ -2,31 +2,31 @@ body {
     background-color: antiquewhite;
 }
 .topNav {
-    background-color: #38393b;
+    background-color: rgb(119, 98, 71);
 }
 .topNav button, a {
-    background-color: #38393b;
-    color: grey;
+    background-color: rgb(119, 98, 71);
+    color: lightgrey;
 }
 .topNav button:hover, a:hover {
-    background-color: #454647;
+    background-color: rgb(104, 83, 55);
     color: white;
 }
 .dropdown .dropbtn {
-    color: grey;
+    color: lightgrey;
 }
 .dropdown-content {
-    background-color: #38393b;
+    background-color: rgb(119, 98, 71);
 }
 .dropdown-content button, a {
-    color: grey;
+    color: lightgrey;
 }
 .dropdown-content button:hover, a:hover {
-    background-color: #454647;
+    background-color: rgb(104, 83, 55);
     color: white;
 }
 .dropdown:hover .dropbtn {
-    background-color: #454647;
+    background-color: rgb(104, 83, 55);
     color: white;
 }
 .floatButton {
@@ -53,4 +53,7 @@ body {
 }
 .checkbox:hover {
     background-color: rgb(253, 221, 180);
+}
+::selection {
+    background-color: rgba(221, 183, 134, 0.596);
 }

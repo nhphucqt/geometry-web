@@ -54,3 +54,6 @@ body {
 .checkbox:hover {
     background-color: rgb(238, 237, 237);
 }
+::selection {
+    background-color: rgba(170, 168, 168, 0.561);
+}

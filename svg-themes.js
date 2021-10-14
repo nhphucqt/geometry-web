@@ -16,7 +16,7 @@ const svgTheme = {
     water: {
         svg: "#CAF4F4",
         axis: "black",
-        point: "blue",
+        point: "#224444",
         polyline: "black",
         polygon: "black"
     },
