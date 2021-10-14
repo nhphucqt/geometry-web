@@ -25,7 +25,6 @@
                 <div class="dropdown-content">
                     <a href="https://github.com/nhphucqt">My Github profile</a>
                     <a href="https://github.com/nhphucqt/geometry-web">See project on Github</a>
-                    <a href="https://glitch.com/edit/#!/geometry-web">See project on Glitch</a>
                 </div>
             </div>
         </div>
@@ -42,13 +41,13 @@
                 <div id="displayColumn" class="column" style="width:85%;">
                     <div id="svgDiv" style="width:100%;"></div>
                     <div id="buttonArea" style="height:20px;padding-left:50px">
-                        <button class="floatButton" onclick="display(data)">
+                        <button class="floatButton" title="View all" onclick="display(data)">
                             <ion-icon size="small" src="icons/home-outline.svg"></ion-icon>
                         </button>
-                        <button class="floatButton" onclick="changeGridView()">
+                        <button class="floatButton" title="Toggle grid" onclick="changeGridView()">
                             <ion-icon size="small" src="icons/grid-outline.svg"></ion-icon>
                         </button>
-                        <button class="floatButton" onclick="downloadSVG()">
+                        <button class="floatButton" title="Download SVG" onclick="downloadSVG()">
                             <ion-icon size="small" src="icons/download-outline.svg"></ion-icon>
                         </button>
                     </div>
