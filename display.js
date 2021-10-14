@@ -473,12 +473,8 @@ var themeSelect = d3.select("#theme");
 function changeTheme(theme) {
     if (typeof(Storage) !== "undefined")
         localStorage.setItem("theme", theme);
-    // themeSelect
-    //     .attr("href", "color-themes/theme-"+theme+".css");
-    d3.select("#"+curTheme)
-        .attr("rel", "alternate stylesheet");
-    d3.select("#"+theme)
-        .attr("rel", "stylesheet");
+    themeSelect
+        .attr("href", "color-themes/theme-"+theme+".css");
     curTheme = theme;
     realSVG
         .style("background-color", svgTheme[theme].svg);
