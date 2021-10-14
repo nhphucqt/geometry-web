@@ -1,3 +1,26 @@
+function downloadInput() {
+    let link = document.createElement('a');
+    link.download = 'geometry_input.txt';
+    let blob = new Blob([document.getElementById("inputData").value], {type: 'text/plain'});
+    link.href = URL.createObjectURL(blob);
+    console.log(link.href);
+    link.click();
+    URL.revokeObjectURL(link.href);
+}
+
+function uploadInput() {
+    var up = document.createElement("input");
+    up.type = "file";
+    up.addEventListener("change", function() {
+        let f = new FileReader();
+        f.onload = function() {
+            document.getElementById("inputData").value = f.result;
+        }
+        f.readAsText(this.files[0]);
+    })
+    up.click();
+}
+
 function downloadSVG() {
     let link = document.createElement('a');
     link.download = 'geometry.svg';

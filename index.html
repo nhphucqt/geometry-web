@@ -11,6 +11,13 @@
         <div class="topNav">
             <button title="F9" onclick="display(getInput())">Draw</button>
             <div class="dropdown">
+                <button class="dropbtn">File</button>
+                <div class="dropdown-content">
+                    <button onclick="downloadInput()">Download input</button>
+                    <button onclick="uploadInput()">Upload input</button>
+                </div>
+            </div>
+            <div class="dropdown">
                 <button class="dropbtn">Themes</button>
                 <div class="dropdown-content">
                     <button onclick="changeTheme('white')">White</button>
