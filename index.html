@@ -20,13 +20,7 @@
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Themes</button>
-                <div class="dropdown-content">
-                    <button onclick="changeTheme('white')">White</button>
-                    <button onclick="changeTheme('eyewhite')">Eyewhite</button>
-                    <button onclick="changeTheme('water')">Water</button>
-                    <button onclick="changeTheme('antiquewhite')">Antiquewhite</button>
-                    <button onclick="changeTheme('darksky')">Dark sky</button>
-                </div>
+                <div id="themeButtons" class="dropdown-content"></div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Help</button>
@@ -72,7 +66,10 @@
 
         <script src="geometry.js"></script>
         <script src="svg-themes.js"></script>
+
         <script src="localStorage.js"></script>
+        <script src="load-theme-buttons.js"></script>
+
         <script src="display.js"></script>
         <script src="function.js"></script>
     </body>
