@@ -1,4 +1,4 @@
-themeOptions = [
+const themeOptions = [
     ["white", "White"],
     ["eyewhite", "Eyewhite"],
     ["water", "Water"],
