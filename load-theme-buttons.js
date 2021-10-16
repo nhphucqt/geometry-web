@@ -2,6 +2,7 @@ const themeOptions = [
     ["white", "White"],
     ["eyewhite", "Eyewhite"],
     ["water", "Water"],
+    ["antiquewhite", "Antiquewhite"],
     ["darksky", "Dark sky"]
 ];
 
