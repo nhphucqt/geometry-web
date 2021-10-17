@@ -9,27 +9,7 @@
         <link id="theme" rel="stylesheet">
     </head>
     <body onbeforeunload="return ''">
-        <div class="topNav">
-            <button title="F9" onclick="display(getInput())">Draw</button>
-            <div class="dropdown">
-                <button class="dropbtn">File</button>
-                <div class="dropdown-content">
-                    <button onclick="downloadInput()">Download input</button>
-                    <button onclick="uploadInput()">Upload input</button>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Themes</button>
-                <div id="themeButtons" class="dropdown-content"></div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Help</button>
-                <div class="dropdown-content">
-                    <a href="https://github.com/nhphucqt">My Github profile</a>
-                    <a href="https://github.com/nhphucqt/geometry-web">See project on Github</a>
-                </div>
-            </div>
-        </div>
+        <div id="topNav" class="topNav"></div>
         <div class="main">
             <div class="toggleDiv">
                 <button id="toggleButton" class="checkbox" onclick="toggleInputArea()">
@@ -42,35 +22,29 @@
                 </div>
                 <div id="displayColumn" class="column" style="width:85%;">
                     <div id="svgDiv" style="width:100%;"></div>
-                    <div id="buttonArea" style="height:20px;padding-left:50px">
-                        <button class="floatButton" title="View all" onclick="display(data)">
-                            <ion-icon size="small" src="icons/home-outline.svg"></ion-icon>
-                        </button>
-                        <button class="floatButton" title="Toggle grid" onclick="changeGridView()">
-                            <ion-icon size="small" src="icons/grid-outline.svg"></ion-icon>
-                        </button>
-                        <button class="floatButton" title="Download SVG" onclick="downloadSVG()">
-                            <ion-icon size="small" src="icons/download-outline.svg"></ion-icon>
-                        </button>
-                    </div>
+                    <div id="buttonArea" style="height:20px;padding-left:50px"></div>
                 </div>
             </div>
         </div>
-
+        
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="css-element-queries-1.2.1/src/ResizeSensor.js"></script>
         <script src="https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.min.js?a4098"></script>
-
+        
         <script src="geometry.js"></script>
         <script src="svg-themes.js"></script>
-
+        
         <script src="localStorage.js"></script>
-        <script src="load-theme-buttons.js"></script>
-
+        <script src="loaders/load-draw-button.js"></script>
+        <script src="loaders/load-file-buttons.js"></script>
+        <script src="loaders/load-theme-buttons.js"></script>
+        <script src="loaders/load-help-buttons.js"></script>
+        <script src="loaders/load-float-buttons.js"></script>
+        
         <script src="display.js"></script>
         <script src="function.js"></script>
     </body>
-</html>
+    </html>

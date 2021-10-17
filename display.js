@@ -179,29 +179,30 @@ function getInput() {
     let cur = "", mode = -1;
     rawData.forEach(element => {
         if (data[element[0]] !== undefined) {
-            if (element.length > 1) {
-                mode = Number(element[1]);
-            }
-            else {
-                mode = -1;
-            }
             cur = element[0];
-            if (cur != "Point") {
-                if (mode == -1)
+            mode = element.length > 1 ? element[1] : -1;
+            if (cur != "Point") { // guaranteed cur != -1
+                if (cur == "Polyline" || cur == "Polygon") {
                     data[cur].push([]);
-                else 
+                }
+                else {
                     data[cur][mode].push([]);
+                }
             }
         }
         else {
             if (cur != "Point") {
-                if (mode == -1)
-                    data[cur].at(-1).push([Number(element[0]), Number(element[1])]);
-                else
-                    data[cur][mode].at(-1).push([Number(element[0]), Number(element[1])]);
+                if (cur == "Polyline" || cur == "Polygon") {
+                    data[cur].at(-1).push(element.map(x => Number(x)));
+                    if (mode == 1)
+                        data["Point"].push(element.map(x => Number(x)));
+                }
+                else {
+                    data[cur][mode].at(-1).push(element.map(x => Number(x)));
+                }
             }
             else {
-                data[cur].push([Number(element[0]), Number(element[1])]);
+                data[cur].push(element.map(x => Number(x)));
             }
         }
     });
