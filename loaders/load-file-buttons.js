@@ -1,6 +1,10 @@
 !function() {
     const fileOptions = [
         {
+            command: "toggleExampleBar()",
+            text: "Examples"
+        },
+        {
             command: "downloadInput()",
             text: "Download input"
         },

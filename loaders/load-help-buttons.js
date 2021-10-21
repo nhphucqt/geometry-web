@@ -1,10 +1,6 @@
 !function() {
     const helpOptions = [
         {
-            link: "demos/",
-            text: "Demos"
-        },
-        {
             link: "https://github.com/nhphucqt",
             text: "My Github profile"
         },

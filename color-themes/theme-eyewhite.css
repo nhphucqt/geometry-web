@@ -2,51 +2,41 @@ body {
     background-color: #F8F5FA;
 }
 .topNav {
-    background-color: #38393b;
+    background-color: #69656b;
 }
 .topNav button, a {
-    background-color: #38393b;
-    color: grey;
+    background-color: #69656b;
+    color: lightgrey;
 }
 .topNav button:hover, a:hover {
-    background-color: #454647;
+    background-color: #58535a;
     color: white;
 }
 .dropdown .dropbtn {
-    color: grey;
+    color: lightgrey;
 }
 .dropdown-content {
-    background-color: #38393b;
+    background-color: #69656b;
 }
 .dropdown-content button, a {
-    color: grey;
+    color: lightgrey;
 }
 .dropdown-content button:hover, a:hover {
-    background-color: #454647;
+    background-color: #58535a;
     color: white;
 }
 .dropdown:hover .dropbtn {
-    background-color: #454647;
+    background-color: #58535a;
     color: white;
 }
-.floatButton {
-    background-color: #F8F5FA;
+.sideBar {
+    background-color: #e2e0e4;
 }
-.floatButton:hover {
-    background-color: #ded9e0;
+.sideBar button {
+    background-color: #e2e0e4;
 }
-.inputArea {
-    background-color: #F8F5FA;
-}
-.inputArea::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.inputArea::-webkit-scrollbar-thumb {
-    background-color: #c4c1c7;
-}
-.inputArea::-webkit-scrollbar-corner {
-    background-color: #F8F5FA;
+.sideBar button:hover {
+    background-color: #cfcbd3;
 }
 .checkbox {
     background-color: #F8F5FA;
@@ -54,6 +44,21 @@ body {
 .checkbox:hover {
     background-color: #ded9e0;
 }
+.inputArea {
+    background-color: #F8F5FA;
+}
+.inputArea::-webkit-scrollbar-thumb {
+    background-color: #c4c1c7;
+}
+.inputArea::-webkit-scrollbar-corner {
+    background-color: #F8F5FA;
+}
 ::selection {
     background-color: #b0a7b68a;
+}
+.floatButton {
+    background-color: #F8F5FA;
+}
+.floatButton:hover {
+    background-color: #ded9e0;
 }

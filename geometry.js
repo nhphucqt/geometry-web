@@ -67,6 +67,16 @@ const geo = {
     CCW: function CCW(a, b, c) { // Counter Clockwise
         return this.moreThan(b.sub(a).crossProd(c.sub(b)), 0);
     },
+    toPolygon: function toPolygon(points) { // points: [[x1,y1],[x2,y2]]
+        // bottom left (points[0]) -> top right (points[1])
+        points = [
+            [points[0][0], points[0][1]],
+            [points[1][0], points[0][1]],
+            [points[1][0], points[1][1]],
+            [points[0][0], points[1][1]]
+        ];
+        return points;
+    },
     GrahamScan: function GrahamScan(points) { // points: [[x1,y1],[x2,y2],...]
         if (points.length == 0) return points;
         points = points.map(x => new this.Point(x[0],x[1]));

@@ -59,5 +59,39 @@ function toggleInputArea() {
     }
 }
 
+var toggleExampleBarMode = 0;
+function toggleExampleBar() {
+    toggleExampleBarMode ^= 1;
+    if (toggleExampleBarMode == 0)
+        d3.select(".sideBar")
+            .style("display", "none");
+    else
+        d3.select(".sideBar")
+            .style("display", "unset");
+}
+
+function closeExampleBar() {
+    toggleExampleBarMode = 0;
+    d3.select(".sideBar")
+        .style("display", "none");
+}
+
+function runExample(filePath) {
+    $.ajax({
+        url: filePath,
+        success: function (inputText){
+            document.getElementById("inputData").value = inputText;
+            display(getInput());
+        }
+    });
+}
+
 // Shortcut keys
 Mousetrap.bind('f9', function() {display(getInput());});
+
+// resize sensor
+var bodyObject = document.body;
+new ResizeSensor(jQuery("body"), function() {
+    d3.selectAll(".dropdown-content")
+        .style("max-height", (bodyObject.offsetHeight*0.8)+"px");
+});

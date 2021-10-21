@@ -17,6 +17,7 @@ const INIT_DATA = {
     "Point": [],
     "Polyline": [],
     "Polygon": [],
+    "Rect": [[],[]],
     "ConvexHull": [[],[]],
     "GrahamScan": [[],[]],
     "Farthest": [[],[]],
@@ -230,6 +231,13 @@ function getInput() {
             console.log(geo.Area(polygon));
             if (i == 1)
                 data["Polygon"].push(polygon);
+        });
+        data["Rect"][i].forEach(function(points) {
+            let newPoints = geo.toPolygon(points);
+            console.log(newPoints);
+            data["Polygon"].push(newPoints);
+            if (i == 1)
+                data["Point"] = data["Point"].concat(newPoints);
         });
     }
 

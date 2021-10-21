@@ -29,24 +29,14 @@ body {
     background-color: #234e4e;
     color: white;
 }
-.floatButton {
-    background-color: #CAF4F4;
+.sideBar {
+    background-color: #abe2e2;
 }
-.floatButton:hover {
-    background-color: #abdfdf;
+.sideBar button {
+    background-color: #abe2e2;
 }
-.inputArea {
-    background-color: #CAF4F4;
-}
-.inputArea::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.inputArea::-webkit-scrollbar-thumb {
-    background-color: #8db9b9;
-}
-.inputArea::-webkit-scrollbar-corner {
-    background-color: #CAF4F4;
+.sideBar button:hover {
+    background-color: #99cece;
 }
 .checkbox {
     background-color: #CAF4F4;
@@ -54,6 +44,21 @@ body {
 .checkbox:hover {
     background-color: #abdfdf;
 }
+.inputArea {
+    background-color: #CAF4F4;
+}
+.inputArea::-webkit-scrollbar-thumb {
+    background-color: #8db9b9;
+}
+.inputArea::-webkit-scrollbar-corner {
+    background-color: #CAF4F4;
+}
 ::selection {
     background-color: #62c7c78f;
+}
+.floatButton {
+    background-color: #CAF4F4;
+}
+.floatButton:hover {
+    background-color: #abdfdf;
 }

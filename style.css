@@ -14,7 +14,7 @@ body {
     height: 35px;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
 }
@@ -45,7 +45,7 @@ body {
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    overflow-y: auto;
 }
 .dropdown-content button, a {
     float: none;
@@ -83,6 +83,37 @@ body {
     padding: 0 0 0 0;
     cursor: pointer;
 }
+.sideBar {
+    background-color: azure;
+    height: 100%;
+    position: fixed;
+    top: 35px;
+    left: 0;
+    z-index: 1;
+    display: none;
+    max-height: 100%;
+    overflow-y: auto;
+}
+.sideBar > button {
+    width: 100%;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Pencil', sans-serif;
+}
+.closeBlock {
+    height: 30px;
+    width: 100%;
+}
+.closeButton {
+    height: 100%;
+    width: 30px;
+    padding: 0;
+    float: right;
+    border: none;
+    font-size: 25px;
+}
 /* sub main */
 .subMain {
     height: 100%;
@@ -103,6 +134,10 @@ body {
     resize: none;
     outline: none;
     cursor: auto;
+}
+.inputArea::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
 .floatButton {
     height: 100%;

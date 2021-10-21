@@ -29,24 +29,14 @@ body {
     background-color: rgb(104, 83, 55);
     color: white;
 }
-.floatButton {
-    background-color: antiquewhite;
+.sideBar {
+    background-color: rgb(223, 208, 188);
 }
-.floatButton:hover {
-    background-color: rgb(253, 221, 180);
+.sideBar button {
+    background-color: rgb(223, 208, 188);
 }
-.inputArea {
-    background-color: antiquewhite;
-}
-.inputArea::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.inputArea::-webkit-scrollbar-thumb {
-    background-color: rgb(212, 187, 154);
-}
-.inputArea::-webkit-scrollbar-corner {
-    background-color: antiquewhite;
+.sideBar button:hover {
+    background-color: rgb(209, 189, 162);
 }
 .checkbox {
     background-color: antiquewhite;
@@ -54,6 +44,21 @@ body {
 .checkbox:hover {
     background-color: rgb(253, 221, 180);
 }
+.inputArea {
+    background-color: antiquewhite;
+}
+.inputArea::-webkit-scrollbar-thumb {
+    background-color: rgb(212, 187, 154);
+}
+.inputArea::-webkit-scrollbar-corner {
+    background-color: antiquewhite;
+}
 ::selection {
     background-color: rgba(221, 183, 134, 0.596);
+}
+.floatButton {
+    background-color: antiquewhite;
+}
+.floatButton:hover {
+    background-color: rgb(253, 221, 180);
 }

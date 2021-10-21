@@ -26,28 +26,15 @@ body {
 .dropdown:hover .dropbtn {
     color: white;
 }
-.floatButton {
+.sideBar {
+    background-color: #00021F;
+}
+.sideBar button {
     background-color: #00021F;
     color: grey;
 }
-.floatButton:hover {
+.sideBar button:hover {
     color: white;
-}
-.inputArea {
-    border-color: gray;
-    background-color: #00021F;
-    color: grey;
-    caret-color: lightgrey;
-}
-.inputArea::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-.inputArea::-webkit-scrollbar-thumb {
-    background-color: rgb(92, 91, 91);
-}
-.inputArea::-webkit-scrollbar-corner {
-    background-color: #00021F;
 }
 .checkbox {
     background-color: #00021F;
@@ -56,6 +43,25 @@ body {
 .checkbox:hover {
     color: white;
 }
+.inputArea {
+    border-color: gray;
+    background-color: #00021F;
+    color: grey;
+    caret-color: lightgrey;
+}
+.inputArea::-webkit-scrollbar-thumb {
+    background-color: rgb(92, 91, 91);
+}
+.inputArea::-webkit-scrollbar-corner {
+    background-color: #00021F;
+}
 ::selection {
     background-color: #257ec77e;
+}
+.floatButton {
+    background-color: #00021F;
+    color: grey;
+}
+.floatButton:hover {
+    color: white;
 }
