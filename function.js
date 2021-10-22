@@ -49,13 +49,13 @@ function toggleInputArea() {
         inputColumnSelect
             .style("display", "none");
         displayColumnSelect
-            .style("width", "100%");
+            .style("left", "0%");
     }
     else {
         inputColumnSelect
             .style("display", "unset");
         displayColumnSelect
-            .style("width", "85%");
+            .style("left", "15%");
     }
 }
 
@@ -93,5 +93,5 @@ Mousetrap.bind('f9', function() {display(getInput());});
 var bodyObject = document.body;
 new ResizeSensor(jQuery("body"), function() {
     d3.selectAll(".dropdown-content")
-        .style("max-height", (bodyObject.offsetHeight*0.8)+"px");
+        .style("max-height", (bodyObject.offsetHeight-45)+"px");
 });

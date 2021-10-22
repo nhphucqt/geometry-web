@@ -7,7 +7,7 @@ d3.select("#svgDiv")
     .style("height", newHeight+"px");
 
 // set the dimensions and margins of the graph
-var margin = {top: 5, right: 10, bottom: 20, left: 50},
+var margin = {top: 10, right: 15, bottom: 20, left: 50},
     height = document.getElementById("svgDiv").offsetHeight,
     width = document.getElementById("svgDiv").offsetWidth,
     mainWidth = width - margin.left - margin.right,
@@ -417,16 +417,14 @@ function updateChart() {
     rescatter(newX, newY);
 }
 
+var displayColumn = document.getElementById("displayColumn");
 new ResizeSensor(jQuery("#displayColumn"), function() {
     // console.log("displayColumn's size changed");
-    let newHeight = document.getElementById("displayColumn").offsetHeight
-            - document.getElementById("buttonArea").offsetHeight;
     d3.select("#svgDiv")
-        .style("height", newHeight+"px");
-
-    height = document.getElementById("svgDiv").offsetHeight,
-    width = document.getElementById("svgDiv").offsetWidth,
-    mainWidth = width - margin.left - margin.right,
+        .style("height", (displayColumn.offsetHeight-25)+"px");
+    height = document.getElementById("svgDiv").offsetHeight;
+    width = document.getElementById("svgDiv").offsetWidth;
+    mainWidth = width - margin.left - margin.right;
     mainHeight = height - margin.top - margin.bottom;
 
     xAxisTicks[1].size = -mainHeight;
