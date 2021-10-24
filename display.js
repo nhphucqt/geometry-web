@@ -26,6 +26,7 @@ var data = JSON.parse(JSON.stringify(INIT_DATA));
 
 var realSVG = d3.select("#svgDiv")
     .append("svg")
+        .attr("id", "displayArea")
         .attr("xmlns", "http://www.w3.org/2000/svg")
         .attr("width", width)
         .attr("height", height);
