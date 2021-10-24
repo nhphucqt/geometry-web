@@ -1,15 +1,11 @@
 // Reference: https://www.d3-graph-gallery.com/graph/interactivity_zoom.html
 
-// init svgDiv's height
-let newHeight = document.getElementById("displayColumn").offsetHeight
-                - document.getElementById("buttonArea").offsetHeight;
-d3.select("#svgDiv")
-    .style("height", newHeight+"px");
+var svgDiv = document.getElementById("svgDiv");
 
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 15, bottom: 20, left: 50},
-    height = document.getElementById("svgDiv").offsetHeight,
-    width = document.getElementById("svgDiv").offsetWidth,
+    height = svgDiv.offsetHeight,
+    width = svgDiv.offsetWidth,
     mainWidth = width - margin.left - margin.right,
     mainHeight = height - margin.top - margin.bottom;
 
@@ -31,7 +27,6 @@ var data = JSON.parse(JSON.stringify(INIT_DATA));
 var realSVG = d3.select("#svgDiv")
     .append("svg")
         .attr("xmlns", "http://www.w3.org/2000/svg")
-        .attr("id", "displayArea")
         .attr("width", width)
         .attr("height", height);
 
@@ -81,10 +76,10 @@ var tickMode = 1,
         },
         {
             "size": -mainHeight,
-            "width": 0.5,
+            "width": 0.25,
             "yLine": -mainHeight,
             "yText": 3,
-            "lineOpacity": 0.3
+            "lineOpacity": 0.75
         }
     ],
     yAxisTicks = [
@@ -97,10 +92,10 @@ var tickMode = 1,
         },
         {
             "size": -mainWidth,
-            "width": 0.5,
+            "width": 0.25,
             "xLine": mainWidth,
             "xText": -3,
-            "lineOpacity": 0.3
+            "lineOpacity": 0.75
         }
     ];
 
@@ -145,7 +140,7 @@ var zoom = d3.zoom()
     .extent([[0, 0], [width, height]])
     .on("zoom", updateChart);
     
-    // This add an invisible rect on top of the chart area. This rect can recover pointer events: necessary to understand when the user zoom
+// This add an invisible rect on top of the chart area. This rect can recover pointer events: necessary to understand when the user zoom
 var zoomRect = SVG.append("rect")
     .attr("width", mainWidth)
     .attr("height", mainHeight)
@@ -153,12 +148,6 @@ var zoomRect = SVG.append("rect")
     .style("pointer-events", "all")
     .call(zoom);
 // now the user can zoom and it will trigger the function called updateChart
-
-// displayArea
-// clip
-// zoomRect
-// x, y, xAxis, yAxis
-// scatter
 
 function getRange(lef, rig, step = 1) {
     a = [];
@@ -417,13 +406,16 @@ function updateChart() {
     rescatter(newX, newY);
 }
 
-var displayColumn = document.getElementById("displayColumn");
+// realSVG
+// clip
+// zoomRect
+// x, y, xAxis, yAxis
+// scatter
+
 new ResizeSensor(jQuery("#displayColumn"), function() {
     // console.log("displayColumn's size changed");
-    d3.select("#svgDiv")
-        .style("height", (displayColumn.offsetHeight-25)+"px");
-    height = document.getElementById("svgDiv").offsetHeight;
-    width = document.getElementById("svgDiv").offsetWidth;
+    height = svgDiv.offsetHeight;
+    width = svgDiv.offsetWidth;
     mainWidth = width - margin.left - margin.right;
     mainHeight = height - margin.top - margin.bottom;
 
@@ -433,7 +425,7 @@ new ResizeSensor(jQuery("#displayColumn"), function() {
     yAxisTicks[1].xLine = mainWidth;
 
     // update display area dimension
-    d3.select("#displayArea")
+    realSVG
         .attr("height", height)
         .attr("width", width);
     clip

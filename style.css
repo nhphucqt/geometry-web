@@ -31,7 +31,6 @@ html, body {
 }
 .dropdown .dropbtn {
     border: none;
-    outline: none;
     margin: 0;
 }
 .dropdown-content {
@@ -118,7 +117,7 @@ html, body {
     height: 100%;
     width: 15%;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 .inputArea {
     height: 100%;
@@ -130,18 +129,21 @@ html, body {
     outline: none;
     cursor: auto;
 }
-.inputArea::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 .displayColumn {
     position: absolute;
     left: 15%;
-    right: 0px;
+    right: 0;
     height: 100%;
 }
 .svgDiv {
+    position: absolute;
     width: 100%;
+    top: 0;
+    bottom: 25px;
 }
 .floatButtonArea {
     position: absolute;

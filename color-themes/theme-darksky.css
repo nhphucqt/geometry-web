@@ -49,10 +49,10 @@ body {
     color: grey;
     caret-color: lightgrey;
 }
-.inputArea::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: rgb(92, 91, 91);
 }
-.inputArea::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background-color: #00021F;
 }
 ::selection {

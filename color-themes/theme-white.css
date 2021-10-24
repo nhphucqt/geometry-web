@@ -47,10 +47,10 @@ body {
 .inputArea {
     background-color: white;
 }
-.inputArea::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: darkgrey;
 }
-.inputArea::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background-color: white;
 }
 ::selection {
