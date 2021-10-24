@@ -88,10 +88,3 @@ function runExample(filePath) {
 
 // Shortcut keys
 Mousetrap.bind('f9', function() {display(getInput());});
-
-// resize sensor
-var bodyObject = document.body;
-new ResizeSensor(jQuery("body"), function() {
-    d3.selectAll(".dropdown-content")
-        .style("max-height", (bodyObject.offsetHeight-45)+"px");
-});
